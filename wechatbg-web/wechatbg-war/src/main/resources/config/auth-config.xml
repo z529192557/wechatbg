@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	<bean name="authorizationModule" class="com.greenline.guahao.web.module.common.pipe.AuthorizationValve"/>
+	<!--域名权限处理  -->
+	<bean name="domainFilter" class="com.greenline.guahao.web.module.common.pipe.DomainFilter"></bean>	
+	<!-- 绿线所有域名authorization,notPermits为禁止访问的页面 ,blackPaths是需要登陆的,还是登陆后跳转到自定页面  redictPaths -->
+	<bean name="greenLineAuthorization"
+		class="com.greenline.guahao.web.module.common.pipe.GreenLineAuthorization">
+		<property name="whitePaths">
+			<util:list>
+				<value>/my/order/validate/*</value>
+			</util:list>
+		</property>
+		<property name="permitPath">
+			<util:list>
+				<value>/mobile/**</value>
+			</util:list>
+		</property>
+		<property name="blackPaths">
+			<util:list>
+				<value>/hd/login/*</value>
+			</util:list>
+		</property>
+		<property name="loginPath" value="/user/login" />
+		<property name="notFound" value="/notfound" />
+		<property name="errorViewName" value="error" />
+		<property name="expiredPath" value="/expired" />
+	</bean>
+
+</beans>

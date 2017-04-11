@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config description="自动配置：portal-web.deploy">
+	<group name="portal-web" description="portal-web配置">
+		<property name="greenline.guahao.template.update.delay" defaultValue="3600000" description="template延迟时间" />
+		<property name="greenline.guahao.template.templatePath" defaultValue="/home/greenline/htdocs/templates" description="template模板路径" />
+		<property name="greenline.guahao.version" defaultValue="1.1" description="挂号网url版本号" />
+		<property name="greenline.guahao.static.server" defaultValue="http://192.168.1.26:6008" description="挂号网url静态服务地址" />
+		<property name="greenline.guahao.image.server" defaultValue="http://img.guahao.cn" description="挂号网url图片服务地址" />
+		<property name="greenline.guahao.loggingRoot" defaultValue="/home/greenline/logs" description="日志根目录" />
+		<property name="greenline.guahao.loggingLevel" defaultValue="error" description="日志级别" />		
+		<property name="greenline.guahao.hd.server.domain" defaultValue="wy.guahao.com" description="二级域名设置" />
+		<property name="greenline.guahao.hd.server" defaultValue="wy.guahao.com/hd" description="手机自动跳转域名" />
+		<property name="greenline.guahao.server" defaultValue="wy.guahao.com" description="手机自动跳转域名" />
+		<property name="greenline.guahao.model.isdev" defaultValue="true" description="调试开发模式" />
+		<property name="greenline.guahao.hd.server.context" defaultValue="hd" description="调试开发模式" />
+    </group>
+	<script>
+		<generate template="config.properties.vm" destfile="/WEB-INF/classes/config/config.properties" charset="UTF-8" />
+	</script>
+</config>

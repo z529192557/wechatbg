@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.wechatbg</groupId>
+    <artifactId>wechatbg-web</artifactId>
+    <version>1.0</version>
+  </parent>
+  <artifactId>wechatbg-war</artifactId>
+  	<dependencies>
+		<dependency>
+			<groupId>com.wechatbg</groupId>
+			<artifactId>wechatbg-home</artifactId>
+			<version>1.0</version>
+		</dependency>
+	</dependencies>
+	
+    <properties>
+		<!-- Add for Jetty Server -->
+		<jetty.version>8.1.0.RC1</jetty.version>
+		<glassfish.javax.version>2.2.3</glassfish.javax.version>
+		<glassfish.javax-impl.version>2.2</glassfish.javax-impl.version>
+		<glassfish.jstl.version>1.2</glassfish.jstl.version>
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceExcludes>
+						js/*,
+						img/**,
+						css/*,
+						images/*,
+						compressor/*,
+						404.htm,
+						500.htm
+					</warSourceExcludes>
+				</configuration>
+			</plugin>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.15.v20140411</version>
+            </plugin>
+		</plugins>
+	</build>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+</project>

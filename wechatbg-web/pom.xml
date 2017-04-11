@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.wechatbg</groupId>
+		<artifactId>wechatbg</artifactId>
+		<version>1.0</version>
+		<relativePath>../base/pom.xml</relativePath>
+	</parent>
+  <artifactId>wechatbg-web</artifactId>
+  <name>微信后台</name>
+  <description>微信后台</description>
+  <packaging>pom</packaging>
+  <version>1.0</version>
+  <modules>
+  	<module>wechatbg-deploy</module>
+  	<module>wechatbg-home</module>
+  	<module>wechatbg-war</module>
+  </modules>
+</project>
