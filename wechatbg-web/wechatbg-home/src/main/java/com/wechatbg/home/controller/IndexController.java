@@ -30,6 +30,6 @@ public class IndexController {
     @RequestMapping("/")
 	public ResponseVO<String> home() {
 		System.out.println(request.getRequestURI());
-		return ResponseVO.getSuccessResponse("Hello World!");
+		return ResponseVO.getSuccessResponse("庄鹏？你能不能帮我搞一下环境!");
     }
 }
