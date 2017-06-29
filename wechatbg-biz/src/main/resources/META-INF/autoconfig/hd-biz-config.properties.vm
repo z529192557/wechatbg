@@ -1,6 +1,0 @@
-greenline.user.hessian.server=${greenline.user.hessian.server}
-rms.dubbo.application.name=${rms.dubbo.application.name}
-rms.dubbo.application.owner=${rms.dubbo.application.owner}
-rms.dubbo.registry.address=${rms.dubbo.registry.address}
-rms.dubbo.application.cache.file.dir=${rms.dubbo.application.cache.file.dir}
-greenline.dubbo.app.start.valid=${greenline.dubbo.app.start.valid}
